@@ -20,9 +20,9 @@ services:
        image: mysql:8.0.26
        environment:
            MYSQL_ROOT_PASSWORD: root
-           MYSQL_DATABASE: laravel_db
-           MYSQL_USER: laravel_user
-           MYSQL_PASSWORD: laravel_pass
+           MYSQL_DATABASE: php_db
+           MYSQL_USER: php_user
+           MYSQL_PASSWORD: php_pass
 
 
    phpmyadmin:
@@ -30,8 +30,8 @@ services:
        environment:
            - PMA_ARBITRARY=1
            - PMA_HOST=mysql
-           - PMA_USER=laravel_user
-           - PMA_PASSWORD=laravel_pass
+           - PMA_USER=php_user
+           - PMA_PASSWORD=php_pass
        depends_on:
            - mysql
        ports:
